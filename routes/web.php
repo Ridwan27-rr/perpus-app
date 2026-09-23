@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\HomeController;
+
+route ::get('/', [HomeController::class, 'index']);
+route ::get('/tentang', [HomeController::class, 'tentang']); 
+route ::get('/kontak', [HomeController::class, 'kontak']);
